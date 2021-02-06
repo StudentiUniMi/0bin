@@ -1,0 +1,32 @@
+name: Docker build and push
+
+on:
+  push:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Login to ghcr registry
+        uses: docker/login-action@v1
+        if: ${{ github.event_name != 'pull_request' }}
+        with:
+          registry: ghcr.io
+          username: ${{ secrets.GH_USERNAME }}
+          password: ${{ secrets.GH_ACCESS_TOKEN }}
+
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v2.2.2
+        with:
+          context: .
+          file: ./Dockerfile
+          tags: |
+            StudentiUnimi/zerobin:latest
+          push: true
