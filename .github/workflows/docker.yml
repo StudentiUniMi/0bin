@@ -16,7 +16,6 @@ jobs:
 
       - name: Login to ghcr registry
         uses: docker/login-action@v1
-        if: ${{ github.event_name != 'pull_request' }}
         with:
           registry: ghcr.io
           username: ${{ secrets.GH_USERNAME }}
@@ -28,5 +27,5 @@ jobs:
           context: .
           file: ./Dockerfile
           tags: |
-            studentiunimi/zerobin:latest
+            ghcr.io/studentiunimi/zerobin:latest
           push: true
