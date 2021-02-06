@@ -52,7 +52,6 @@ MENU = (
     # correctly to the user using JS.
     ("Contact", "mailto:your@email.com"),
     ("Zerobin Pastebin", "https://www.0bin.net/"),  # Thanks the authors :)
-    ("How to buy Bitcoin?", "/buy_bitcoin"),  # Thanks the authors :)
 )
 
 # limit size of pasted text in bytes. Be careful allowing too much size can slow down user's
