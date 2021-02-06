@@ -27,5 +27,5 @@ jobs:
           context: .
           file: ./Dockerfile
           tags: |
-            ghcr.io/studentiunimi/zerobin:latest
+            ghcr.io/studentiunimi/0bin:latest
           push: true
