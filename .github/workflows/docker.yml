@@ -28,5 +28,5 @@ jobs:
           context: .
           file: ./Dockerfile
           tags: |
-            StudentiUnimi/zerobin:latest
+            studentiunimi/zerobin:latest
           push: true
