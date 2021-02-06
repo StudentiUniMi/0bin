@@ -140,7 +140,7 @@
     <span class="message"></span>
   </p>
 
-
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a01aada8d53f44709781f2d04dc04e4b"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 
 </html>
