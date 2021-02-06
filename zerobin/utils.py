@@ -103,7 +103,10 @@ def ensure_app_context(data_dir=None, config_dir=None):
     bottle.TEMPLATE_PATH.insert(0, zerobin.ROOT_DIR / "views")
 
     CUSTOM_VIEWS_DIR = settings.CONFIG_DIR / "custom_views"
-    CUSTOM_VIEWS_DIR.mkdir(exist_ok=True)
+    try:
+        CUSTOM_VIEWS_DIR.mkdir(exist_ok=True)
+    except FileExistsError:
+        pass
 
     bottle.TEMPLATE_PATH.insert(0, CUSTOM_VIEWS_DIR)
 
