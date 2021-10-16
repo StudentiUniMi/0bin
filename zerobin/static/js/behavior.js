@@ -38,7 +38,7 @@ var app = new Vue({
       btcTipAddress: ''
     },
     newPaste: {
-      expiration: '1_day',
+      expiration: 'never',
       content: '',
       title: '',
       btcTipAddress: ''
