@@ -14,4 +14,6 @@ RUN pip3 install .
 VOLUME /data
 ENV ZEROBIN_CONFIG_DIR=/config
 
+EXPOSE 80
+
 CMD ["zerobin"]
